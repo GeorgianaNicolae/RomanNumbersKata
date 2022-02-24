@@ -5,21 +5,19 @@ describe RomanNumbers do
         @romannumbers = described_class.new
     end
 
-    it "returns true if the argument in an integer" do
 
-        result = @romannumbers.roman_numbers(1)
-        expect(result).to eq(true)
+
+    it "checks if it accepts a number less than 1" do
+
+        result = @romannumbers.roman_numbers(0)
+        expect(result).to eq("The rommans didn't recognise this number")
     end
 
-    it "returns false if the argument in not integer" do
-
-        result = @romannumbers.roman_numbers("1")
-        expect(result).to eq(false)
+ 
+    it "returns one of the elements in numbers_from1_up_to_3" do
+        result = @romannumbers.roman_numbers(3)
+        expect(result).to eq("III")
     end
 
-    it "returns false if the argument in not integer" do
-
-        result = @romannumbers.roman_numbers("1")
-        expect(result).to eq(false)
-    end
+    
 end
